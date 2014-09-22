@@ -1,0 +1,103 @@
+$space: 10px;
+$duration_time: .6s;
+$menu_height: 50px;
+$font_family1: "Trebuchet MS", "hy_title_font";
+$font_family2: "Tahoma", "hy_contain_font";
+/*  ##################  */
+/*  #### Text Size ###  */
+/*  ##################  */
+$text_size: 15px;
+$smail_title: 20px;
+$subtitle_size: 24px;
+$title_size: $subtitle_size*2;
+$menu_size: 18px;
+
+/*  ##################  */
+/*  ###### Color #####  */
+/*  ##################  */
+$hy_white: #f8faf2;
+
+$color1: #969696; //gray
+$color2: #d8be9e; //light orange
+$color3: #222222; //black
+$color4: #bd622d; //orange
+$color5: $hy_white;
+$color6: #f9f4e8; //white
+$color7: #a0bc50; //green
+$color8: #8fbfdf; //blue
+
+$background_color1: $color6;
+$background_color2: $color3;
+$background_color3: $color4;
+
+
+$border_color1: $color5;
+$font_color1: $color5;
+$link_color: $color3;
+
+/*  ##################  */
+/*  ##### Border #####  */
+/*  ##################  */
+$border1: 1px solid $border_color1;
+
+/*  ##################  */
+/*  ### Box Shadow ###  */
+/*  ##################  */
+$box_shadow_bottom1: 0 2px 5px #888888;
+
+/*  ##################  */
+/*  #### Flex Box ####  */
+/*  ##################  */
+
+@mixin flexbox {
+  @include box-align(center);
+  @include box-sizing(border-box);
+  display: -webkit-box !important;
+  display: -moz-box !important;
+  width: 100%;
+}
+
+@mixin flex1 {
+  @include box-flex(1);
+  display: block !important;
+  overflow: hidden;
+  width: 100%;
+}
+
+@mixin flex2 {
+  @include box-flex(2);
+  display: block !important;
+  overflow: hidden;
+  width: 100%;
+}
+
+.hy_flexbox {
+  @include flexbox;
+  .hy_flex1 {
+    @include flex1;
+  }
+  .hy_flex2 {
+    @include flex2;
+  }
+}
+
+@mixin highlight_base {
+  @include border-radius(5px);
+  font-weight: bold;
+}
+
+@mixin highlight1 {
+  @include highlight_base;
+  background-color: $color8;
+}
+.hy_highlight1 {
+  @include highlight1;
+}
+
+@mixin highlight2 {
+  @include highlight_base;
+  background-color: $color7;
+}
+.hy_highlight2 {
+  @include highlight2;
+}
