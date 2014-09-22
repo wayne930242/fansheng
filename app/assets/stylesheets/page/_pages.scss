@@ -1,0 +1,17 @@
+ol.number_list {
+  list-style: inside;
+  li {
+    list-style-type: decimal;
+    display: list-item;
+  }
+}
+.idea {
+  background-color: $background_color1;
+  .inner {
+    // line-height: 2.5;
+  }
+}
+
+.service {
+
+}

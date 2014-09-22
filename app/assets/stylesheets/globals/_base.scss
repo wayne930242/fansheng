@@ -1,0 +1,145 @@
+html {
+  height: 100%;
+  overflow: auto !important;
+}
+
+body {
+  font: $text_size $font_family1;
+}
+
+a {
+  text-decoration: none;
+  word-wrap: break-word;
+  color: $font_color1;
+}
+
+.home {
+  background-color: $background_color2;
+  padding: $space;
+  color: $font_color1;
+  overflow: hidden;
+  .hy_flex2 {
+    text-align: center;
+  }
+  .hy_flex1 {
+    padding: $space;
+  }
+  .hy_logo {
+    img {
+      margin: auto;
+      width: 100%;
+      max-width: 200px;
+    }
+  }
+}
+.hy_title {
+  font-size: $title_size;
+}
+.hy_subtitle {
+  font-size: $subtitle_size;
+}
+.hy_smailtitle {
+  font-size: $smail_title;
+}
+
+.hy_menu {
+  background-color: $background_color3;
+  a {
+    @include transition(all $duration_time ease-in-out);
+    font-size: $menu_size;
+    overflow: hidden;
+    max-height: $menu_height;
+    .hy_item {
+      display: block;
+      padding: 15px 0;
+      margin: $space $space/2;
+      border-bottom: $border1;
+      text-align: center;
+      position: relative;
+    }
+    .hy_hover {
+      opacity: 0;
+      height: 0;
+      font-family: "Arial Black";
+    }
+    .hy_normal {
+      @include transition-delay($duration_time/3);
+    }
+    span {
+      @include transition(opacity $duration_time/2);
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+    &.active {
+      background-color: #c69a3f;
+    }
+    &:hover {
+      background-color: #d4b772;
+      // color: $hover_color;
+      .hy_item {
+        border-width: 3px;
+        // border-color: $hover_color;
+      }
+      .hy_hover {
+        @include transition-delay($duration_time/3);
+        opacity: 1;
+        height: 0;
+      }
+      .hy_normal {
+        @include transition-delay(0s);
+        opacity: 0;
+        height: auto;
+      }
+    }
+  }
+}
+// menu - end
+.subMenu {
+  height: $menu_height;
+  z-index: 1000;
+  width: 100%;
+  .inner {
+    padding:0;
+    font-weight: 400;
+    margin: 0 auto;
+  }
+}
+
+.section {
+  padding: $space;
+  font-family: $font_family2;
+  line-height: 1.5;
+  // width: 100%;
+  // max-width: 1600px;
+  // min-width: 960px;
+  z-index: 10;
+  position: relative;
+  margin: 0 auto;
+  // height: 500px;
+}
+
+footer {
+  padding: 15px;
+  font-size: $text_size/1.1;
+  background-color: $background_color2;
+  color: $font_color1;
+  .hy_footer {
+    overflow: hidden;
+    > div {
+      float: left;
+      padding: $space/2 $space 0;
+    }
+  }
+  .hy_th {
+    border-bottom: 1px dotted $border_color1;
+    margin: $space auto;
+    width: 40%;
+  }
+  .hy_copyright {
+    text-align: center;
+  }
+}
+// footer - end

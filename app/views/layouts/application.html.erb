@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>芳生實實派報社</title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+    <script type="text/javascript">
+      $(document).ready( function() {
+          $('.subMenu').smint({
+            'scrollSpeed' : 1000
+          });
+      });
+    </script>
+  </head>
+  <body>
+    <%= render 'layouts/font_family' %>
+
+    <%= render 'layouts/header' %>
+
+    <%= yield %>
+
+    <%= render 'layouts/footer' %>
+  </body>
+</html>
